@@ -137,7 +137,193 @@ header {
 .img img {
     width: 100%;
     cursor: pointer;
-    filter: drop-shadow(5px 5px 5px rgb(242, 255, 0));
+    animation: fire-animation 4s alternate-reverse infinite;
+}
+
+@keyframes fire-animation {
+    0%, 100% {
+        filter: drop-shadow(2px 2px 20px var(--yellow));
+    }
+    50% {
+        filter: drop-shadow(2px 2px 20px #8a0303);
+    }
+}
+
+.scocialMedia-icons {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.scocialMedia-icons i {
+    color: var(--yellow);
+    margin-block: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: .3s;
+}
+
+.scocialMedia-icons i:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 930px) {
+    .text h1 {
+        font-size: 42px;
+    }
+
+    .text .description {
+        font-size: 14px;
+    }
+
+    .text .slogan {
+        font-size: 17px;
+    }
+
+    .text .welcome-text {
+        font-size: 14px;
+    }
+
+    .text .btn {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 695px) {
+    .img {
+        display: none;
+    }
+
+    .scocialMedia-icons {
+        bottom: -230px;
+        transform: translateY(0);
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: row;
+    }
+
+    .scocialMedia-icons i {
+        margin-block: 0;
+        margin-inline: 10px;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .text {
+        width: 90%;
+    }
+
+    .text .welcome-text {
+        font-size: 16px;
+    }
+
+    .text h1 {
+        font-size: 50px;
+    }
+
+    .text .slogan {
+        font-size: 18px;
+    }
+
+    .text .description {
+        font-size: 16px;
+    }
+
+    .text .btn {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 505px) {
+        
+    .text h1 {
+        font-size: 42px;
+    }
+
+    .text .description {
+        font-size: 14px;
+    }
+
+    .text .slogan {
+        font-size: 17px;
+    }
+
+    .text .welcome-text {
+        font-size: 14px;
+    }
+
+    .text .btn {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .text h1 {
+        font-size: 30px;
+    }
+
+    .text .description {
+        font-size: 12.5px;
+    }
+
+    .text .slogan {
+        font-size: 16px;
+    }
+
+    .text .btn {
+        font-size: 12px;
+        padding: 15px 10px;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .text h1 {
+        font-size: 24px;
+    }
+
+    .text .description {
+        font-size: 10.5px;
+    }
+
+    .text .btn {
+        font-size: 10.5px;
+        padding: 12.5px;
+    }
+
+    .text .slogan {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 260px) {
+    .text h1 {
+        font-size: 17px;
+    }
+
+    .text .slogan {
+        font-size: 13px;
+    }
+
+    .text .description {
+        font-size: 9px;
+    }
+
+    .text .btn {
+        font-size: 9px;
+    }
+
+    .scocialMedia-icons i {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 930px) {
