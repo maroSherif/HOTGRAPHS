@@ -54,6 +54,15 @@ scrollOpacity.forEach((el) => {
 const swiper = new Swiper(".swiper", {
   loop: true,
 
+  slidesPerView: 1,
+
+  breakpoints: {
+    645: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+  },
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -61,6 +70,12 @@ const swiper = new Swiper(".swiper", {
 
   keyboard: {
     enabled: true,
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
   },
 });
 
