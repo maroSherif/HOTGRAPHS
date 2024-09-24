@@ -81,7 +81,19 @@ header {
     font-size: 64px;
     letter-spacing: 10px;
     margin-top: 10px;
+    user-select: none;
+    animation: text-shadow 3s infinite;
 }
+
+@keyframes text-shadow {
+    0%, 100% {
+        text-shadow: 1px 1px 35px var(--yellow);
+    }
+    50% {
+        text-shadow: 1px 1px 20px var(--yellow);
+    }
+}
+
 
 .text .slogan {
     text-transform: uppercase;
@@ -132,6 +144,7 @@ header {
 
 .img {
     width: 40%;
+    user-select: none;
 }
 
 .img img {
@@ -531,21 +544,11 @@ nav a:hover {
 
 /* Latest Projects & Products*/
 
-.swiper {
-    min-height: 100vh;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-}
-
 .latestProjects-title,
 .products-title {
     margin-bottom: 20px;
     position: relative;
+    display: inline-block;
 }
 
 .latestProjects-title a,
@@ -573,42 +576,33 @@ nav a:hover {
     width: 100%;
 }
 
-.swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#latest-projects {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.scroll-container {
+    overflow: auto;
+    white-space: nowrap;
     user-select: none;
 }
 
-.swiper-slide img {
-    border: 2px solid #fff;
-    border-radius: 25px;
-    padding: 15px;
-    width: 300px;
-    aspect-ratio: 1 / 1;
-    box-sizing: border-box;
+.container {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-    color: #f2ae30;
-    position: absolute;
+.scroll-container::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
-.swiper-button-next {
-    right: 4px;
-}
-
-.swiper-button-prev {
-    left: 4px;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: var(--yellow) !important;
-}
-
-.swiper-pagination-bullet {
-    border: 4px solid var(--yellow);
+.scroll-container img {
+    width: 450px;
+    margin-inline: 5px;
 }
 
 /* Services & Contact Info */
