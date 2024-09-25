@@ -51,33 +51,33 @@ scrollOpacity.forEach((el) => {
 
 // Swiper
 
-const swiper = new Swiper(".swiper", {
-  loop: true,
+// const swiper = new Swiper(".swiper", {
+//     loop: true,
 
-  slidesPerView: 1,
+//     slidesPerView: 1,
 
-  breakpoints: {
-    645: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-  },
+//     breakpoints: {
+//         645: {
+//             slidesPerView: 2,
+//             spaceBetween: 20
+//         }
+//     },
 
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+//     navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//     },
 
-  keyboard: {
-    enabled: true,
-  },
+//     keyboard: {
+//         enabled: true,
+//     },
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-});
+//     pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,
+//         dynamicBullets: true,
+//     },
+// });
 
 // var swiper = new Swiper(".mySwiper", {
 //   slidesPerView: 3,
